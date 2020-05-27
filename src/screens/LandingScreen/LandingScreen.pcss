@@ -76,6 +76,7 @@
   }
 
   &__header,
+  &__introduction,
   &__market-info,
   &__platform-info,
   &__register,
@@ -135,6 +136,79 @@
     }
   }
 
+  &__introduction {
+    align-items: center;
+    background-color: #1c1f3a;
+    background-image: url(assets/images/landing/introductions/bg-left.svg), url(assets/images/landing/introductions/bg-right.svg), linear-gradient(143.85deg, #00112d 0%, #151831 100%);
+    background-position: calc(-60px - 10vw) calc(-200px + 3vw), calc(75vw - 150px) calc(-300px + 4vw), 0% 0%;
+    background-repeat: no-repeat;
+    background-size: calc(350px + 20vw), calc(400px + 20vw), 100%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    height: 100%;
+    justify-content: center;
+    margin-top: 64px;
+    padding-bottom: 75px;
+    width: 100%;
+
+    &__wrap {
+      align-items: center;
+      display: flex;
+      flex-direction: initial;
+      height: 100%;
+      justify-content: center;
+      margin-top: 110px;
+      width: 100%;
+
+      &__item {
+        h1 {
+          color: white;
+          font-size: 55px;
+          font-weight: 700;
+          margin-bottom: 20px;
+          text-align: left;
+        }
+
+        h4 {
+          font-size: 1.5rem;
+          font-weight: 700;
+        }
+
+        &__fade {
+          background: linear-gradient(to right, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.1));
+          height: 1px;
+          margin: 20px 0;
+        }
+
+        &__row {
+          display: flex;
+          flex-wrap: wrap;
+          margin-left: -15px;
+          margin-right: -15px;
+        }
+
+        &__col {
+          flex-basis: 0;
+          flex-grow: 1;
+          max-width: 100%;
+        }
+      }
+
+      &__item:first-child {
+        flex: 0 0 41.666667%;
+        max-width: 41.666667%;
+      }
+
+      &__item:last-child {
+        flex: 0 0 58.333333%;
+        max-width: 58.333333%;
+      }
+    }
+  }
+
   &__market-info {
     align-items: center;
     background: url(assets/images/landing/GridMainBG.svg);
@@ -180,7 +254,7 @@
   }
 
   &__platform-info {
-    background: var(--primary-cta-color);
+    background: var(--cta-layer-color-level-7);
     height: 250px;
     max-width: 100vw;
 
@@ -195,7 +269,7 @@
         justify-content: center;
 
         span {
-          color: var(--primary-text-color);
+          color: var(--primary-cta-color);
           font-style: normal;
           text-align: center;
 
@@ -265,7 +339,7 @@
     }
 
     h1 {
-      color: var(--text-contrast-color);
+      color: var(--primary-text-color);
       margin-bottom: 25px;
     }
 
@@ -303,7 +377,7 @@
           }
 
           h2 {
-            color: var(--text-contrast-color);
+            color: var(--primary-text-color);
             font-size: 18px;
             font-style: normal;
             font-weight: 500;
@@ -313,7 +387,7 @@
           }
 
           span {
-            color: var(--text-contrast-color);
+            color: var(--primary-text-color);
             font-size: 16px;
             letter-spacing: 0.25px;
             line-height: 28px;
@@ -544,6 +618,24 @@
             margin-right: 10%;
             width: 60px;
           }
+        }
+      }
+    }
+
+    &__introduction {
+      height: max-content;
+
+      &__wrap {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+
+        &__item:first-child {
+          max-width: 100%;
+        }
+
+        &__item:last-child {
+          max-width: 100%;
         }
       }
     }

@@ -87,9 +87,19 @@ export const ru: LangType = {
 
 
     /* Landing */
-    'page.body.landing.header.button1': 'profile',
+    'page.body.landing.header.button1': 'trade now',
     'page.body.landing.header.button2': 'log in',
     'page.body.landing.header.button3': 'register',
+    'page.body.landing.header.button4': 'news & updates',
+
+    'page.body.landing.introduction.item1.text': 'We are a licensed digital assets trading platform. Buy and sell digital assets with confidence on our secure platform.',
+    'page.body.landing.introduction.item1.header': 'A cryptocurrency exchange for everyone',
+    'page.body.landing.introduction.item1.sub.header': 'Welcome to Wowoo Exchange Labuan',
+
+    'page.body.landing.introduction.item2.header': 'Features',
+    'page.body.landing.introduction.item2.item1.text': 'USD deposits & withdrawals',
+    'page.body.landing.introduction.item2.item2.text': 'Free sign up &',
+    'page.body.landing.introduction.item2.item3.text': 'digital assets deposits',
 
     'page.body.landing.marketInfo.title.text1': 'Welcome to Baseapp.',
     'page.body.landing.marketInfo.title.text2': 'Buy, sell and trade digital currency.',

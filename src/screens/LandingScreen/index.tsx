@@ -9,6 +9,7 @@ import {
     selectUserLoggedIn,
 } from '../../modules';
 
+const IntroductionsTopTrade = require('../../assets/images/landing/introductions/toptrade.svg');
 const FeaturesExchangeIcon = require('../../assets/images/landing/features/Exchange.svg');
 const FeaturesTypesIcon = require('../../assets/images/landing/features/Types.svg');
 const FeaturesCustomizeIcon = require('../../assets/images/landing/features/Customize.svg');
@@ -43,6 +44,9 @@ class Landing extends React.Component<Props> {
                         </div>
                         <div className="pg-landing-screen__header__wrap__right">
                             <Link to="/profile" className="landing-button">
+                                {this.translate('page.body.landing.header.button4')}
+                            </Link>
+                            <Link to="/profile" className="landing-button landing-button--secondary ml-3">
                                 {this.translate('page.body.landing.header.button1')}
                             </Link>
                         </div>
@@ -70,17 +74,64 @@ class Landing extends React.Component<Props> {
         );
     }
 
+    public renderIntroduction() {
+        return (
+            <div className="pg-landing-screen__introduction">
+                <div className="pg-landing-screen__introduction__wrap">
+                    <div className="pg-landing-screen__introduction__wrap__item">
+                        <h1>{this.translate('page.body.landing.introduction.item1.header')}</h1>
+                        <h4>{this.translate('page.body.landing.introduction.item1.sub.header')}</h4>
+                        <figcaption className="figure-caption text-md-left">
+                            <p>
+                                {this.translate('page.body.landing.introduction.item1.text')}
+                            </p>
+                        </figcaption>
+                        <div className="pg-landing-screen__introduction__wrap__item__fade"></div>
+                        <h5 className="mb-5">{this.translate('page.body.landing.introduction.item2.header')}</h5>
+                        <div className="pg-landing-screen__introduction__wrap__item__row">
+                            <div className="pg-landing-screen__introduction__wrap__item__col">
+                                <div className="pg-landing-screen__introduction__wrap__item__row justify-content-center">
+                                    <div className="col-md-2">
+                                    <i className="fa fa-check text-danger"></i>
+                                    </div>
+                                    <div className="pg-landing-screen__introduction__wrap__item__col">
+                                    {this.translate('page.body.landing.introduction.item2.item1.text')}
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="pg-landing-screen__introduction__wrap__item__col">
+                                <div className="pg-landing-screen__introduction__wrap__item__row">
+                                    <div className="col-md-2">
+                                    <i className="fa fa-check text-danger"></i>
+                                    </div>
+                                    <div className="pg-landing-screen__introduction__wrap__item__col">
+                                    {this.translate('page.body.landing.introduction.item2.item2.text')}
+                                    <br className="d-none d-lg-block"/>
+                                    {this.translate('page.body.landing.introduction.item2.item3.text')}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="pg-landing-screen__introduction__wrap__item">
+                        <img src={IntroductionsTopTrade} className="img-fluid" alt="trade-image-icon"/>
+                    </div>
+                </div>
+            </div>
+        );
+    }
+
     public renderMarketInfoBlock() {
         return (
             <div className="pg-landing-screen__market-info">
                 <div className="pg-landing-screen__market-info__wrap">
-                    <div className="pg-landing-screen__market-info__wrap__title">
+                    {/* <div className="pg-landing-screen__market-info__wrap__title">
                         <h1>{this.translate('page.body.landing.marketInfo.title.text1')}</h1>
                         <h1>{this.translate('page.body.landing.marketInfo.title.text2')}</h1>
                         <Link to="/trading" className="landing-button">
                             {this.translate('page.body.landing.marketInfo.title.button')}
                         </Link>
-                    </div>
+                    </div> */}
                     <MarketsTable />
                 </div>
             </div>
@@ -275,6 +326,7 @@ class Landing extends React.Component<Props> {
         return (
             <div className="pg-landing-screen">
                 {this.renderHeader()}
+                {this.renderIntroduction()}
                 {this.renderMarketInfoBlock()}
                 {this.renderPlatformInfoBlock()}
                 {this.renderRegisterBlock()}
