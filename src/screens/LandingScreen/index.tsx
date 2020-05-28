@@ -2,6 +2,11 @@ import * as React from 'react';
 import { InjectedIntlProps, injectIntl } from 'react-intl';
 import { connect } from 'react-redux';
 import { Link, RouteProps, withRouter } from 'react-router-dom';
+import { ReactComponent as AdvantageFriendlyIcon } from '../../assets/images/landing/advantages/friendly.svg';
+import { ReactComponent as AdvantageGlobalIcon } from '../../assets/images/landing/advantages/global.svg';
+import { ReactComponent as AdvantageMonitoringIcon } from '../../assets/images/landing/advantages/monitoring.svg';
+import { ReactComponent as AdvantageNetworkIcon } from '../../assets/images/landing/advantages/network.svg';
+import { ReactComponent as AdvantageSecurityIcon } from '../../assets/images/landing/advantages/security.svg';
 import { LogoIcon } from '../../assets/images/LogoIcon';
 import { MarketsTable } from '../../containers';
 import {
@@ -10,6 +15,7 @@ import {
 } from '../../modules';
 
 const IntroductionsTopTrade = require('../../assets/images/landing/introductions/toptrade.svg');
+
 const FeaturesExchangeIcon = require('../../assets/images/landing/features/Exchange.svg');
 const FeaturesTypesIcon = require('../../assets/images/landing/features/Types.svg');
 const FeaturesCustomizeIcon = require('../../assets/images/landing/features/Customize.svg');
@@ -114,7 +120,56 @@ class Landing extends React.Component<Props> {
                         </div>
                     </div>
                     <div className="pg-landing-screen__introduction__wrap__item">
-                        <img src={IntroductionsTopTrade} className="img-fluid" alt="trade-image-icon"/>
+                        <img src={IntroductionsTopTrade} className="img-fluid" alt="trade-icon"/>
+                    </div>
+                </div>
+            </div>
+        );
+    }
+
+    public renderAdvantage() {
+        return(
+            <div className="pg-landing-screen__advantage">
+                <div className="pg-landing-screen__advantage__wrap">
+                    <h1>{this.translate('page.body.landing.advantage.item1.title')}</h1>
+                    <div className="pg-landing-screen__advantage__wrap__row">
+                        <div className="pg-landing-screen__advantage__wrap__col-4">
+                        <AdvantageFriendlyIcon className="pg-landing-screen__advantage__wrap__icon img-fluid"/>
+                        <h5>{this.translate('page.body.landing.advantage.item1.sub1.title')}</h5>
+                        <figcaption className="figure-caption">
+                        <p>{this.translate('page.body.landing.advantage.item1.sub1.text')}</p>
+                        </figcaption>
+                        </div>
+                        <div className="pg-landing-screen__advantage__wrap__col-4">
+                        <AdvantageSecurityIcon className="pg-landing-screen__advantage__wrap__icon img-fluid"/>
+                        <h5>{this.translate('page.body.landing.advantage.item1.sub2.title')}</h5>
+                        <figcaption className="figure-caption">
+                        <p>{this.translate('page.body.landing.advantage.item1.sub2.text')}</p>
+                        </figcaption>
+                        </div>
+                        <div className="pg-landing-screen__advantage__wrap__col-4">
+                        <AdvantageGlobalIcon className="pg-landing-screen__advantage__wrap__icon img-fluid"/>
+                        <h5>{this.translate('page.body.landing.advantage.item1.sub3.title')}</h5>
+                        <figcaption className="figure-caption">
+                        <p>{this.translate('page.body.landing.advantage.item1.sub3.text')}</p>
+                        </figcaption>
+                        </div>
+                    </div>
+                    <div className="pg-landing-screen__advantage__wrap__row">
+                        <div className="pg-landing-screen__advantage__wrap__col-4">
+                        <AdvantageMonitoringIcon className="pg-landing-screen__advantage__wrap__icon img-fluid"/>
+                        <h5>{this.translate('page.body.landing.advantage.item1.sub4.title')}</h5>
+                        <figcaption className="figure-caption">
+                        <p>{this.translate('page.body.landing.advantage.item1.sub4.text')}</p>
+                        </figcaption>
+                        </div>
+                        <div className="pg-landing-screen__advantage__wrap__col-4">
+                        <AdvantageNetworkIcon className="pg-landing-screen__advantage__wrap__icon img-fluid"/>
+                        <h5>{this.translate('page.body.landing.advantage.item1.sub5.title')}</h5>
+                        <figcaption className="figure-caption">
+                        <p>{this.translate('page.body.landing.advantage.item1.sub5.text')}</p>
+                        </figcaption>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -329,6 +384,7 @@ class Landing extends React.Component<Props> {
                 {this.renderIntroduction()}
                 {this.renderMarketInfoBlock()}
                 {this.renderPlatformInfoBlock()}
+                {this.renderAdvantage()}
                 {this.renderRegisterBlock()}
                 {this.renderFeaturesBlock()}
                 {this.renderTradeOnTheGoBlock()}

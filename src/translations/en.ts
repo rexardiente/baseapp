@@ -102,6 +102,19 @@ export const en = {
     'page.body.landing.introduction.item2.item2.text': 'Free sign up &',
     'page.body.landing.introduction.item2.item3.text': 'digital assets deposits',
 
+    'page.body.landing.advantage.item1.title': 'The Wowoo Exchange Labuan Advantage',
+    'page.body.landing.advantage.item1.sub1.title': 'A User-Friendly Exchange for Everyone',
+    'page.body.landing.advantage.item1.sub1.text': 'Intuitive user interface design for both first-time users and seasoned traders',
+    'page.body.landing.advantage.item1.sub2.title': 'Best-in-Class Asset Security',
+    'page.body.landing.advantage.item1.sub2.text': 'Secure wallet management and storage, rigorously tested and continually monitored',
+    'page.body.landing.advantage.item1.sub3.title': 'Global Licensing',
+    'page.body.landing.advantage.item1.sub3.text': 'Fully licensed and fully regulated, setting the bar for SE Asia markets',
+
+    'page.body.landing.advantage.item1.sub4.title': 'Robust Monitoring',
+    'page.body.landing.advantage.item1.sub4.text': 'Proactive prevention of criminal transactions and monitoring/identification of exchange activity risks',
+    'page.body.landing.advantage.item1.sub5.title': 'Broad Network',
+    'page.body.landing.advantage.item1.sub5.text': 'Strong partnerships with leading global fintech and compliance solution providers',
+
     'page.body.landing.marketInfo.title.text1': 'Welcome to Baseapp.',
     'page.body.landing.marketInfo.title.text2': 'Buy, sell and trade digital currency.',
     'page.body.landing.marketInfo.title.button': 'start trading',
